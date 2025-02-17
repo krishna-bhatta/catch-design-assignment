@@ -100,9 +100,11 @@ Make sure you have the following installed:
 5. **Build and start the services**:
 
     After setting up the environment and folder structure, you can run the following command to build and start the services:
-
-    ```docker-compose up --build```
-6. **Install Dependencies for Backend**:
+   from inside main project `catch-design-assignment`
+   
+    ```docker-compose build```
+   ```docker-compose up -d``` -> If you encounter with any issue check port or see log(see Troubleshooting)
+7. **Install Dependencies for Backend**:
 
     For the backend (Laravel), install the necessary dependencies and run migrations:
 
@@ -112,7 +114,7 @@ Make sure you have the following installed:
     docker exec -it cda-web php artisan migrate
     docker exec -it cda-web php artisan db:seed --class=CustomerSeeder
     ```
-7. **Access the Services**:
+8. **Access the Services**:
 - Frontend: http://localhost:3001
 - Backend API: http://localhost/api
 - PHPMyAdmin: http://localhost:8080
